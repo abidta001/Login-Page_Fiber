@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .welcome-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            
+        }
+
+        .welcome-container h2 {
+    font-weight: bold;
+    color: #f8f9fa; /* Off-white color */
+    text-align: center; /* Aligns the text to the center */
+    font-size: 2.5rem; /* Makes the text larger */
+}
+
+
+        .btn-signout {
+            padding: 0.75rem 2rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-container">
+        <h2>Welcome, {{.Username}}!</h2>
+    </div>
+    <form action="/logout" method="POST">
+        <button type="submit" class="btn btn-danger btn-signout">Sign Out</button>
+    </form>
+</body>
+
+</html>
